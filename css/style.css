@@ -6,7 +6,7 @@
     position: relative;
     max-width: 1280px;
     margin-inline: auto;
-    padding: 2rem 1rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +31,7 @@
 .mobile-view {
     position: static;
     z-index: 20;
-    max-width: 300px;
+    width: 280px;
     max-height: fit-content;
     background-color: var(--color-white);
     padding: 12px;
@@ -44,7 +44,7 @@
     background: var(--gradient-secondary);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     padding-inline: 12px;
     padding-block: 26px 8px;
     border-radius: 22px 22px 0 0;
@@ -65,13 +65,9 @@
 .mobile-view__header button {
     color: var(--color-white);
     background-color: unset;
-
-    &:first-child {
-        width: 22px;
-    }
+    width: 18px;
 
     &:last-child {
-        width: 22px;
         margin-left: auto;
     }
 }
@@ -85,11 +81,15 @@
 .mobile-view__info {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+
+    & h3 {
+        font-size: 14px;
+    }
 
     & p {
         color: var(--color-pale-violet);
-        font-size: 14px;
+        font-size: 10px;
         margin-top: 4px;
     }
 }
@@ -108,13 +108,13 @@
 }
 
 .chatBubble {
-    font-size: 11px;
-    max-width: 180px;
-    padding: 8px 14px;
+    font-size: 8px;
+    max-width: 140px;
+    padding: 6px 14px;
 }
 
 .chatBubble {
-    border-radius: 16px;
+    border-radius: 12px;
 }
 
 .chatBubble.left {
@@ -132,10 +132,12 @@
     margin-left: auto;
 }
 
-.chatImages {
+.chatBubble.chatImages {
+    padding: 0;
+    max-width: fit-content;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
 
     & img {
         width: 42px;
@@ -148,17 +150,17 @@
 .bookingOption {
     display: flex;
     align-items: center;
-    width: 220px;
+    width: 160px;
     gap: 12px;
-    padding: 14px;
+    padding: 8px 12px;
     background: var(--gradient-primary);
     border-radius: 16px 16px 16px 8px;
 
     & input {
         appearance: none;
         border: 1px solid var(--color-white);
-        width: 18px;
-        height: 18px;
+        width: 12px;
+        height: 12px;
         border-radius: 50%;
     }
 }
@@ -166,10 +168,11 @@
 .bookingOption__price {
     margin-left: auto;
     font-weight: 600;
+    font-size: 12px;
 }
 
 .bookingOption__time {
-    font-size: 12px;
+    font-size: 8px;
 }
 
 .form {
@@ -182,7 +185,7 @@
 
 .form__input {
     width: calc(85%);
-    padding: 16px;
+    padding: 14px;
     border-radius: 22px;
     font-family: unset;
 
@@ -230,12 +233,14 @@
     #main {
         flex-direction: row;
         gap: 96px;
+        height: 100vh;
+        padding-left: 16rem;
     }
 
     .blob {
-        width: 500px;
-        height: 700px;
-        transform: translateX(-10%);
+        width: 450px;
+        height: 95vh;
+        transform: translateX(-5%);
     }
 
     .description {

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Chat App</title>
+    </head>
+    <body>
+        <main id="main">
+            <div class="blob"></div>
+            <div class="mobile-view">
+                <header class="mobile-view__header">
+                    <button disabled>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15.75 19.5 8.25 12l7.5-7.5"
+                            />
+                        </svg>
+                    </button>
+                    <div class="mobile-view__info">
+                        <img
+                            src="./images/avatar.jpg"
+                            alt=""
+                            class="mobile-view__info--avatar"
+                        />
+                        <div class="mobile-view__info--content">
+                            <h3>Samuel Green</h3>
+                            <p>Available to Walk</p>
+                        </div>
+                    </div>
+                    <button disabled>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
+                            />
+                        </svg>
+                    </button>
+                </header>
+                <div class="mobile-view__content">
+                    <div class="mobile-view__body">
+                        <div class="chatBubble left">
+                            That sounds great. I'd be happy to discuss more.
+                        </div>
+                        <div class="chatBubble left">
+                            Could you send over some pictures of your dog
+                            please?
+                        </div>
+                        <div class="chatBubble chatImages">
+                            <img src="./images/dog-image-1.jpg" alt="" />
+                            <img src="./images/dog-image-2.jpg" alt="" />
+                            <img src="./images/dog-image-3.jpg" alt="" />
+                        </div>
+                        <div class="chatBubble right">
+                            Here are a few pictures. She's a happy girl
+                        </div>
+                        <div class="chatBubble right">Can you make it?</div>
+                        <div class="chatBubble left">
+                            She looks so happy! The time we discussed works. How
+                            long shall I take her out for?
+                        </div>
+
+                        <div class="bookingOption">
+                            <input type="checkbox" disabled />
+                            <p class="bookingOption__time">30 minute walk</p>
+                            <p class="bookingOption__price">$29</p>
+                        </div>
+
+                        <div class="bookingOption">
+                            <input type="checkbox" disabled />
+                            <p class="bookingOption__time">1 hr walk</p>
+                            <p class="bookingOption__price">$49</p>
+                        </div>
+                    </div>
+
+                    <div class="mobile-view__footer">
+                        <form action="" class="form">
+                            <div>
+                                <input
+                                    type="text"
+                                    class="form__input"
+                                    placeholder="Type a message..."
+                                    disabled
+                                />
+                                <button
+                                    type="submit"
+                                    disabled
+                                    class="form__btn"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="3"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Simple booking</h2>
+                <p>
+                    Stay in touch with our dog walkers through the chat
+                    interface. This makes it easy to discuss arrangements and
+                    make bookings. Once the walk has been completed you can rate
+                    your walker and book again all through the chat.
+                </p>
+            </div>
+        </main>
+    </body>
+</html>

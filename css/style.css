@@ -1,0 +1,252 @@
+@import 'reset.css';
+@import 'global.css';
+@import './variables.css';
+
+#main {
+    position: relative;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 550px;
+    background-color: var(--color-moderate-violet);
+    border-radius: 0 0 700px 700px;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.mobile-view {
+    position: static;
+    z-index: 20;
+    max-width: 300px;
+    max-height: fit-content;
+    background-color: var(--color-white);
+    padding: 12px;
+    border-radius: 32px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.mobile-view__header {
+    position: relative;
+    background: var(--gradient-secondary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-inline: 12px;
+    padding-block: 26px 8px;
+    border-radius: 22px 22px 0 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 16px;
+        background-color: var(--color-white);
+        border-radius: 0 0 22px 22px;
+    }
+}
+
+.mobile-view__header button {
+    color: var(--color-white);
+    background-color: unset;
+
+    &:first-child {
+        width: 22px;
+    }
+
+    &:last-child {
+        width: 22px;
+        margin-left: auto;
+    }
+}
+
+.mobile-view__content {
+    background-color: var(--color-grayish-blue);
+    padding: 16px 12px;
+    border-radius: 0 0 22px 22px;
+}
+
+.mobile-view__info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    & p {
+        color: var(--color-pale-violet);
+        font-size: 14px;
+        margin-top: 4px;
+    }
+}
+
+.mobile-view__info--avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+}
+
+.mobile-view__body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chatBubble {
+    font-size: 11px;
+    max-width: 180px;
+    padding: 8px 14px;
+}
+
+.chatBubble {
+    border-radius: 16px;
+}
+
+.chatBubble.left {
+    color: var(--color-moderate-violet);
+    background-color: #ddd;
+}
+
+.chatBubble.right {
+    color: var(--color-desaturated-dark-violet);
+    background-color: var(--color-white);
+}
+
+.right,
+.chatImages {
+    margin-left: auto;
+}
+
+.chatImages {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    & img {
+        width: 42px;
+        height: 42px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+}
+
+.bookingOption {
+    display: flex;
+    align-items: center;
+    width: 220px;
+    gap: 12px;
+    padding: 14px;
+    background: var(--gradient-primary);
+    border-radius: 16px 16px 16px 8px;
+
+    & input {
+        appearance: none;
+        border: 1px solid var(--color-white);
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+    }
+}
+
+.bookingOption__price {
+    margin-left: auto;
+    font-weight: 600;
+}
+
+.bookingOption__time {
+    font-size: 12px;
+}
+
+.form {
+    position: relative;
+    margin-top: 16px;
+    width: 100%;
+    border-radius: 22px;
+    background-color: var(--color-white);
+}
+
+.form__input {
+    width: calc(85%);
+    padding: 16px;
+    border-radius: 22px;
+    font-family: unset;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.form__btn {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    background-color: var(--color-vdd-violet);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    & svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    text-align: center;
+
+    & h2 {
+        color: var(--color-very-dark-desaturated-violet);
+    }
+
+    & p {
+        color: var(--color-dark-grayish-violet);
+        max-width: 310px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #main {
+        flex-direction: row;
+        gap: 96px;
+    }
+
+    .blob {
+        width: 500px;
+        height: 700px;
+        transform: translateX(-10%);
+    }
+
+    .description {
+        text-align: left;
+
+        & h2 {
+            font-size: 2rem;
+        }
+
+        & p {
+            max-width: 450px;
+        }
+    }
+}

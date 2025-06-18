@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+input {
+    border: none;
+    background-color: none;
+}
+
+button {
+    border: none;
+    background-color: none;
+    color: unset;
+}
